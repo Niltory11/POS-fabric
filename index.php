@@ -7,7 +7,7 @@
             <div class="card shadow-sm border-danger">
                 <div class="card-body text-center">
                     <h5 class="card-title text-danger">Total Customers</h5>
-                    <a class="small text-white stretched-link" href="customers-create.php">View Details</a>
+                    <a class="small text-white stretched-link" href="customers.php">View Details</a>
                     <h4 class="fw-bold">
                         <?php
                         $customerQuery = "SELECT COUNT(*) AS total_customers FROM customers";
@@ -71,19 +71,7 @@
         </div>
     </div>
 
-   <div class="row g-4 mt-3">
-    <!-- Create Order Card -->
-    <div class="col-xl-6 col-md-4">
-        <div class="card" style="background-color: #004d00; color: #ffffff; box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);">
-            <div class="card-body">
-                <h5 class="card-title">Create Order</h5>
-            </div>
-            <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="order-create.php">View Details</a>
-                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
-    </div>
+  
 
     <!-- Add Expenses Card -->
     <div class="col-xl-6 col-md-4">
@@ -92,7 +80,7 @@
                 <h5 class="card-title">Add Expenses</h5>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="add-expenses.php">View Details</a>
+                <a class="small text-white stretched-link" href="addManagerExp.php">View Details</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
