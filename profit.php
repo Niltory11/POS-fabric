@@ -184,7 +184,13 @@ $totalProfit = $totalRevenue - $totalExpenses;
 
 
 
-
+<?php
+session_start();
+if (!isset($_SESSION['authenticated']) || $_SESSION['role'] != 'admin') {
+    header("Location: index.php");
+    exit();
+}
+?>
 
 
 

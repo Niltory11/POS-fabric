@@ -61,9 +61,9 @@
                             <td>
                                 <a href="products-edit.php?id=<?= $item['id']; ?>" class="btn btn-success btn-sm">Edit</a>
                                 <a 
-                                    href="products-delete.php?id=<?= $item['id']; ?>" 
+                                    href="#" 
                                     class="btn btn-danger btn-sm"
-                                    onclick="return confirm('Are you sure you want to delete this image.')"
+                                    onclick="return confirm('Only Manager can Delete!')"
                                 >
                                     Delete
                                 </a>

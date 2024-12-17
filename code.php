@@ -49,12 +49,39 @@ if (isset($_POST['saveCustomer'])) {
 
         $result = insert('customers', $data);
         if ($result) {
-            redirect('customers.php', 'Customer Added Successfully!');
+            redirect('order-create.php', 'Customer Added Successfully!');
         } else {
             redirect('customers-create.php', 'Something Went Wrong!');
         }
     } else {
         redirect('customers-create.php', 'Customer Name is Required.');
+    }
+}
+
+// Update Customer
+if (isset($_POST['updateCustomer'])) {
+    $customer_id = validate($_POST['customer_id']);
+    $name = validate($_POST['name']);
+    $email = validate($_POST['email']); // Treat as Address
+    $phone = validate($_POST['phone']);
+    $status = isset($_POST['status']) ? 1 : 0; // Status for visibility
+
+    if (!empty($name)) {
+        $data = [
+            'name' => $name,
+            'email' => $email, // Treat as address
+            'phone' => $phone,
+            'status' => $status
+        ];
+
+        $result = update('customers', $customer_id, $data);
+        if ($result) {
+            redirect('customers-edit.php?id=' . $customer_id, 'Customer Updated Successfully!');
+        } else {
+            redirect('customers-edit.php?id=' . $customer_id, 'Something Went Wrong!');
+        }
+    } else {
+        redirect('customers-edit.php?id=' . $customer_id, 'Customer Name is Required.');
     }
 }
 

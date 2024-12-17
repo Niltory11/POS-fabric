@@ -6,8 +6,8 @@
         <div class="col-md-3">
             <div class="card shadow-sm border-danger">
                 <div class="card-body text-center">
-                    <h5 class="card-title text-danger">Total Customers</h5>
-                    <a class="small text-white stretched-link" href="customers.php">View Details</a>
+                    <h5 class="card-title text-danger"> Customers</h5>
+                    <a class="small text-white stretched-link" href="customers-create.php">View Details</a>
                     <h4 class="fw-bold">
                         <?php
                         $customerQuery = "SELECT COUNT(*) AS total_customers FROM customers";
@@ -24,7 +24,7 @@
         <div class="col-md-3">
             <div class="card shadow-sm border-primary">
                 <div class="card-body text-center">
-                    <h5 class="card-title text-primary">Total Category</h5>
+                    <h5 class="card-title text-primary"> Category</h5>
                     <a class="small text-white stretched-link" href="categories.php">View Details</a>
                     <h4 class="fw-bold">
                         <?php
@@ -41,7 +41,7 @@
         <div class="col-md-3">
             <div class="card shadow-sm border-warning">
                 <div class="card-body text-center">
-                    <h5 class="card-title text-warning">Total Products</h5>
+                    <h5 class="card-title text-warning"> Products</h5>
                     <a class="small text-white stretched-link" href="products.php">View Details</a>
                     <h4 class="fw-bold">
                         <?php
@@ -54,24 +54,21 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card shadow-sm border-success">
-                <div class="card-body text-center">
-                    <h5 class="card-title text-success">Total Admins</h5>
-                    <h4 class="fw-bold">
-                        <?php
-                        $adminQuery = "SELECT COUNT(*) AS total_admins FROM admins";
-                        $adminResult = mysqli_query($conn, $adminQuery);
-                        $adminData = mysqli_fetch_assoc($adminResult);
-                        echo $adminData['total_admins'];
-                        ?>
-                    </h4>
-                </div>
+      
+
+   <div class="row g-4 mt-3">
+    <!-- Create Order Card -->
+    <div class="col-xl-6 col-md-4">
+        <div class="card" style="background-color: #004d00; color: #ffffff; box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);">
+            <div class="card-body">
+                <h5 class="card-title">Create Order</h5>
+            </div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="order-create.php">View Details</a>
+                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
-
-  
 
     <!-- Add Expenses Card -->
     <div class="col-xl-6 col-md-4">
@@ -80,26 +77,14 @@
                 <h5 class="card-title">Add Expenses</h5>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="addManagerExp.php">View Details</a>
+                <a class="small text-white stretched-link" href="add-expenses.php">View Details</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
 </div>
 
-<div class="row g-4 mt-3">
-    <!-- Add Product Card -->
-    <div class="col-xl-6 col-md-4">
-        <div class="card bg-primary text-white shadow-sm">
-            <div class="card-body">
-                <h5 class="card-title">Add Product</h5>
-            </div>
-            <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="products-create.php">View Details</a>
-                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Stock View Card -->
     <div class="col-xl-6 col-md-4">
@@ -176,7 +161,7 @@
         <div class="col-md-6">
             <div class="card shadow-sm border-danger">
                 <div class="card-body text-center">
-                                        <a class="small text-white stretched-link" href="view-expenses.php">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
 
                     <h5 class="card-title text-danger">Today Expenses</h5>
                     <?php
@@ -193,7 +178,7 @@
         <div class="col-md-6">
             <div class="card shadow-sm border-warning">
                 <div class="card-body text-center">
-                                        <a class="small text-white stretched-link" href="view-expenses.php">View Details</a>
+                                        <a class="small text-white stretched-link" href="#">View Details</a>
 
                     <h5 class="card-title text-warning">Total Expenses</h5>
                     <?php
